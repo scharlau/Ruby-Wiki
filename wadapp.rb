@@ -42,7 +42,8 @@ get '/about' do
     <b>Menu</b><br>
     <a href="/">Home</a><br>
     <a href="/create">Create</a><br>
-    <a href="/about">About</a><br>' + 
+    <a href="/about">About</a><br> 
+    <a href="/edit">Edit</a><br>' + 
     '<h2>About us</h2>
     <p>This wiki was created by</p>' + $myinfo + 
     '<p>Staff ID xxxxxx</p> 
@@ -55,7 +56,8 @@ get '/create' do
     <b>Menu</b><br>
     <a href="/">Home</a><br>
     <a href="/create">Create</a><br>
-    <a href="/about">About</a><br>' + 
+    <a href="/about">About</a><br>
+    <a href="/edit">Edit</a><br>' + 
     '<h2>This is your own create page</h2>
     <section id="add">' + $myinfo + '</section>' +
     '</body></html>'
@@ -83,7 +85,6 @@ end
 put '/edit' do
     info = "#{params[:message]}"
     @info = info
-    puts @info
     file = File.open("wiki.txt", "w")
     file.puts @info
     file.close
