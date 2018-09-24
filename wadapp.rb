@@ -29,6 +29,19 @@ get '/about' do
     </body></html>'
 end
 
+#create page
+
+get '/create' do
+    '<html><body>
+    <b>Menu</b><br>
+    <a href="/">Home</a><br>
+    <a href="/create">Create</a><br>
+    <a href="/about">About</a><br>' + 
+    '<h2>This is your own create page</h2>
+    <section id="add">' + $myinfo + '</section>' +
+    '</body></html>'
+end
+
 #for page not found issues
 not_found do
     status 404
