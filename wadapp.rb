@@ -1,10 +1,11 @@
 require 'sinatra'
 
 $myinfo = "firstname lastname"
-@info = ""
+@info = "" 
 
 get '/' do
     info = "Hello Ruby!"
+    @info = info + " " + $myinfo
     '<html><body>' +
     '<b>Menu</b><br>' +
     '<a href="/create">Create</a><br>' +
