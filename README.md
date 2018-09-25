@@ -8,4 +8,8 @@ This is a single page wiki with everything, apart from the file to store info be
 ### Composite app
 This version has made the code more readable by moving sections to erb views files to get the html out of the code so that it is inclused at run time. By default template views go into a 'views' directory in Sinatra. We also made more use of the readFile method so that it is called twice.
 
+#### Controller 
+The controller design pattern is also represented by both Base and Composite versions as the main file 'wadapp.rb' is the object the directs action by when the user interacts with the menu and other UI components.
+
+
 
