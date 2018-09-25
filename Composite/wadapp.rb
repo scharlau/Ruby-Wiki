@@ -25,42 +25,18 @@ get '/' do
     len2 = len-1
     len3 = len2-len1
     @info = @info +  " " + len3.to_s
-    '<html><body>' +
-    '<b>Menu</b><br>' +
-    '<a href="/">Home</a><br>' +
-    '<a href="/create">Create</a><br>' +
-    '<a href="/about">About</a><br>' +
-    '<a href="/edit">Edit</a><br>' + 
-    '<br><br>' + @info +
-    '</body></html>'
+    erb :home
 end
 
 
 #about page
 get '/about' do
-    '<html><body>
-    <b>Menu</b><br>
-    <a href="/">Home</a><br>
-    <a href="/create">Create</a><br>
-    <a href="/about">About</a><br> 
-    <a href="/edit">Edit</a><br>' + 
-    '<h2>About us</h2>
-    <p>This wiki was created by</p>' + $myinfo + 
-    '<p>Staff ID xxxxxx</p> 
-    </body></html>'
+    erb :about
 end
 
 #create page
 get '/create' do
-    '<html><body>
-    <b>Menu</b><br>
-    <a href="/">Home</a><br>
-    <a href="/create">Create</a><br>
-    <a href="/about">About</a><br>
-    <a href="/edit">Edit</a><br>' + 
-    '<h2>This is your own create page</h2>
-    <section id="add">' + $myinfo + '</section>' +
-    '</body></html>'
+    erb :create
 end
 
 #edit form page
