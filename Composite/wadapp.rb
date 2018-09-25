@@ -42,12 +42,8 @@ end
 #edit form page
 get '/edit' do
     info = ""
-    file = File.open("wiki.txt")
-    file.each do |line|
-        info = info + line
-    end
-    file.close
-    @info = info
+    readFile("wiki.txt")
+    @info = $myinfo
     erb :edit
 end
 
