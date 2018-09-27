@@ -36,6 +36,7 @@ class TestWiki
    puts @myTest.compare(expected, actual, message)
  end
 
+#the test script using the test methods above
 @test = TestWiki.new
 @test.setup
 
