@@ -11,5 +11,7 @@ This version has made the code more readable by moving sections to erb views fil
 #### Controller 
 The controller design pattern is also represented by both Base and Composite versions as the main file 'wadapp.rb' is the object the directs action by when the user interacts with the menu and other UI components.
 
+### Wiki Server
+This version moves towards objects as classes and adds test objects to the mix. This is incomplete but indicates how you could start to create a small server to host the wiki and provide the pages. The lessons here are that objects should serve one purpose, and methods should be small. 
 
 
